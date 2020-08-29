@@ -1,0 +1,28 @@
+{
+  "name": "@devnodes/etc-address",
+  "version": "1.0.1",
+  "description": "generate etc addresses",
+  "main": "dist/main.js",
+  "module": "dist/main-esm.js",
+  "repository": "git@github.com:dev-nodes/etc-address.git",
+  "author": "unibtc <unibtc@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "cleanup": "rm -rf dist",
+    "build": "yarn cleanup && rollup -c",
+    "publish:npm": "yarn publish --access public"
+  },
+  "dependencies": {
+    "bip32": "^2.0.5",
+    "bip39": "^3.0.2",
+    "ethereumjs-util": "^7.0.4"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0"
+  }
+}
